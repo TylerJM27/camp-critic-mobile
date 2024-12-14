@@ -4,6 +4,95 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 Node v. 18.20.5
 
+NUCAMPSITE DEV NOTES: 
+
+COMMIT - CampsiteInfoScreen:
+
+   Folder Setup:
+
+   - features/ inside nucampsite/
+   - campsites/ inside features/
+
+   Create CampsiteInfoScreen.js:
+
+   - Add the file to screens/ 
+   - Import RenderCampsite
+   - set up function component
+   - return RenderCampsite with single prop campsite={props.campsite}
+
+   Create RenderCampsite.js:
+
+   - Add file to campsites/
+   - Import Text and View from 'react-native'
+   - Import Card from 'react-native-elements'
+   - Set up a function component named RenderCampsite, and destructure a property named campsite in the function's parameter list.
+   - Set up an if statement to check if campsite is a truthy value. This can be done by simply passing campsite inside the parenthesis of the if statement.
+   - Inside the if block, return the Card component imported from react-native-elements, passing it the prop containerStyle equal to padding: 0.
+   - Between the Card component's opening and closing tags, add a Card.Image tag with a prop of source equal to campsite.image.
+   - Between the Card.Image component's opening and closing tags, add a View component with a style prop, setting the following style properties:
+   - Between the View component's opening and closing tags, add a Text component with a style prop, setting the following style properties:
+   - Between the Text component's opening and closing tags, display the campsite name by using campsite.name inside curly brackets:
+   - Below the Card.Image closing tag but still within the Card tag, add another Text component with a style prop, setting a style prop of margin: 20.
+   - Between the opening and closing tags, display the campsite description within this Text component, using campsite.description inside curly braces:
+   - Outside of the if statement, handle the case for when campsite is false and the code inside the if block is not returned. To do this, return an empty View component below and outside of the if statement.
+
+   Update MainComponent.js:
+
+   - Import the View component from 'react-native'.
+   - Import the new CampsiteInfoScreen component from './CampsiteInfoScreen'.
+   - In the return statement using the View component, wrap an opening and closing tag around the DirectoryScreen tag
+   - Add a CampsiteInfoScreen tag below the DirectoryScreen tag, and pass the CampsiteInfoScreen a single prop named campsite equal to the following filter expression:
+      - campsites.filter(campsite => campsite.id === selectedCampsiteId)[0]
+   - Below the useState hook for campsites and setCampsites, create another useState hook creating a state variable named selectedCampsiteId and an update function of setSelectedCampsiteId. Leave the parentheses for useState empty, which will initialize the variable with undefined
+   - Inside the DirectoryScreen opening tag, add another prop after the campsites prop called onPress. Set this equal to the callback function shown below:
+   campsiteId => setSelectedCampsiteId(campsiteId)
+
+   Update DirectoryScreen.js:
+
+   - Add an onPress prop to the ListItem component returned from the renderDirectoryItem function used by the FlatList.
+   - Set the onPress prop to an arrow function, and call the custom callback function props.onPress, passing it an argument of campsite.id.
+
+COMMIT - Navigation and Home Screen:
+
+   - Update App.js by: 
+      - importing the NavigationContainer tag 
+      - adding a opening/closing NavigationContainer tag
+
+   - Update MainComponent.js by:
+      - Remove the useState import from 'react'.
+      - Remove the CAMPSITES import from '../shared/campsites'.
+      - Import Platform from 'react-native'.
+      - Import Constants from 'expo-constants'.
+      - Import createStackNavigator from '@react-navigation/stack'.
+      - Create a Function Component named DirectoryNavigator and use Stack.Navigator as a const and in a return statement
+      - Remove the two const declarations making use of the useState() hook
+      - Remove the DirectoryScreen and CampsiteInfoScreen tags being returned in Main
+      - Add self-closing DirectoryNavigator tags inside the View Tag
+
+   - Update DirectoryScreen.js:
+      - import useState hook
+      - import CAMPSITES
+      - create a const variable name campsites using a useState hook with an initial value of CAMPSITES
+      - set the data prop of the FlatList component to the state variable campsites
+      - destructure a prop value of navigation in the parameter list of DirectoryScreen
+      - change the onPress prop of the ListItem component
+
+   -Update CampsiteInfoScreen.js:
+      - destructure route prop in the parameter list of CampsiteInfoScreen function
+      - destructure a campsite variable from the route.params object in the CampsiteInfoScreen function
+      - pass the campsites variable in as the value of the campsites prop for the RenderCampsite component
+
+   - Add Home Screen:
+      - import Text and View from 'react-native'
+      - create a Home Screen function
+
+   - Update MainComponent.js
+      - Update to include the DrawerNavigation to implement HomeScreen
+
+   - Update Home Screen
+      
+
+
 REACT NATIVE NOTES:
 
 WEEK 1:
