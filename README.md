@@ -106,6 +106,14 @@ COMMIT - About/Contact Screen Addition:
          - useState
          - Map method
          - ListItem with Avatar component
+
+COMMIT - Icons, Favorites and Comments:
+
+   - Updated CampsiteInfoScreen to display the comments for each campsite
+
+   - Add icons to Drawer and Stack Navigators
+
+   - Customize the side drawer in the Drawer Navigation to include a header that contains the Nucamp Image and title
       
 
 
