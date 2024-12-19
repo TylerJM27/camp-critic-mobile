@@ -6,6 +6,12 @@ import {
     DrawerContentScrollView,
     DrawerItemList,
 } from "@react-navigation/drawer";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchPartners } from "../features/partners/partnersSlice";
+import { fetchCampsites } from "../features/campsites/campsitesSlice";
+import { fetchPromotions } from '../features/promotions/promotionsSlice';
+import { fetchComments } from '../features/comments/commentsSlice';
 import Constants from "expo-constants";
 import DirectoryScreen from "./DirectoryScreen";
 import CampsiteInfoScreen from "./CampsiteInfoScreen";
@@ -13,6 +19,7 @@ import HomeScreen from "./HomeScreen";
 import AboutScreen from "./AboutScreen";
 import ContactScreen from "./ContactScreen";
 import logo from '../assets/images/logo.png'
+
 
 const Drawer = createDrawerNavigator();
 
@@ -143,6 +150,15 @@ const CustomDrawerContent = (props) => (
 );
 
 const Main = () => {
+    const dispatch = useDispatch(); 
+
+    useEffect(() => {
+        dispatch(fetchCampsites());
+        dispatch(fetchPromotions());
+        dispatch(fetchPartners());
+        dispatch(fetchComments());
+    }, [dispatch]);
+
     return (
         <View
             style={{

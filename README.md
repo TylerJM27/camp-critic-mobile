@@ -6,6 +6,8 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 Node v. 18.20.5
 
+Run Server: json-server -H 0.0.0.0 --watch db.json -p 3001 -d 2000
+
 NUCAMPSITE DEV NOTES: 
 
 COMMIT - CampsiteInfoScreen:
@@ -114,6 +116,30 @@ COMMIT - Icons, Favorites and Comments:
    - Add icons to Drawer and Stack Navigators
 
    - Customize the side drawer in the Drawer Navigation to include a header that contains the Nucamp Image and title
+
+COMMIT - Redux for React Native: 
+
+   - Set up json-server to server our data
+   
+   - Configure the creation of the Redux store
+
+   - Set up slice reducers in separate files to be used in creating the Redux store
+
+   - Set up React Native app to connect the components to Redux
+
+   - Obtain state information from Redux
+
+   - Dispatch actions to the Redux store to update the state
+
+   - Create a new loading component, using the ActivityIndicator component from React Native
+
+   - Update the other components fo that they show the Loading component while data is being fetched from the server, or an error if an error returned from the fetch call to the server
+
+   - Set up a new array property in Redux store to track favorites
+
+   - Set up a case reducer to handle adding and removing favorites in the store
+
+   - Update the CampsiteInforScreen component to use Redux to handle tracking favorites
       
 
 
