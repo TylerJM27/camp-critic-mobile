@@ -10,16 +10,16 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchPartners } from "../features/partners/partnersSlice";
 import { fetchCampsites } from "../features/campsites/campsitesSlice";
-import { fetchPromotions } from '../features/promotions/promotionsSlice';
-import { fetchComments } from '../features/comments/commentsSlice';
+import { fetchPromotions } from "../features/promotions/promotionsSlice";
+import { fetchComments } from "../features/comments/commentsSlice";
 import Constants from "expo-constants";
 import DirectoryScreen from "./DirectoryScreen";
 import CampsiteInfoScreen from "./CampsiteInfoScreen";
 import HomeScreen from "./HomeScreen";
 import AboutScreen from "./AboutScreen";
 import ContactScreen from "./ContactScreen";
-import logo from '../assets/images/logo.png'
-
+import ReservationScreen from "./ReservationScreen";
+import logo from "../assets/images/logo.png";
 
 const Drawer = createDrawerNavigator();
 
@@ -99,6 +99,30 @@ const ContactNavigator = () => {
     );
 };
 
+const ReservationNavigator = () => {
+    const Stack = createStackNavigator();
+
+    return (
+        <Stack.Navigator screenOptions={screenOptions}>
+            <Stack.Screen
+                name="Reservation"
+                component={ReservationScreen}
+                options={({ navigation }) => ({
+                    title: "Reservation Search",
+                    headerLeft: () => (
+                        <Icon
+                            name="tree"
+                            type="font-awesome"
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+                    ),
+                })}
+            />
+        </Stack.Navigator>
+    );
+};
+
 const DirectoryNavigator = () => {
     const Stack = createStackNavigator();
 
@@ -135,22 +159,23 @@ const DirectoryNavigator = () => {
 
 const CustomDrawerContent = (props) => (
     <DrawerContentScrollView {...props}>
-        <View style= {styles.drawerHeader}>
-            <View style={{flex: 1}}>
+        <View style={styles.drawerHeader}>
+            <View style={{ flex: 1 }}>
                 <Image source={logo} style={styles.drawerImage} />
             </View>
-            <View style={{flex: 2}}>
+            <View style={{ flex: 2 }}>
                 <Text style={styles.drawerHeaderText}>Nucamp</Text>
             </View>
         </View>
-        <DrawerItemList {...props} labelStyle={{fontWeight: 'bold'}}>
-
-        </DrawerItemList>
+        <DrawerItemList
+            {...props}
+            labelStyle={{ fontWeight: "bold" }}
+        ></DrawerItemList>
     </DrawerContentScrollView>
 );
 
 const Main = () => {
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchCampsites());
@@ -209,6 +234,22 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
+                    name="ReserveCampsite"
+                    component={ReservationNavigator}
+                    options={{
+                        title: "Reserve Campsite",
+                        drawerIcon: ({ color }) => (
+                            <Icon
+                                name="tree"
+                                type="font-awesome"
+                                size={24}
+                                iconStyle={{ width: 24 }}
+                                color={color}
+                            />
+                        ),
+                    }}
+                />
+                <Drawer.Screen
                     name="AboutNav"
                     component={AboutNavigator}
                     options={{
@@ -247,22 +288,22 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     drawerHeader: {
-        backgroundColor: '#5637DD',
+        backgroundColor: "#5637DD",
         height: 140,
-        alignItems: 'center',
-        justigyContent: 'center',
-        flex: 1, 
-        flexDirection: 'row'
+        alignItems: "center",
+        justigyContent: "center",
+        flex: 1,
+        flexDirection: "row",
     },
     drawerHeaderText: {
-        color: '#fff',
+        color: "#fff",
         fontSize: 24,
-        fontWeight: 'bold'
+        fontWeight: "bold",
     },
     drawerImage: {
         margin: 10,
         height: 60,
-        width: 60
+        width: 60,
     },
     stackIcon: {
         marginLeft: 10,
