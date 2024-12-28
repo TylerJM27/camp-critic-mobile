@@ -155,19 +155,29 @@ COMMIT - Forms and Modals:
 
 COMMIT - Favorites, Swipe Option Buttons, and Alerts:
 
-    - Create a new componment called FavoritesScreen
-        - it will show a list of the campsites that have been marked as a favorite.
+-   Create a new componment called FavoritesScreen
 
-    - Update the navigation for the mobile application so that the FavoritesScreen can be accessed as a Stack Navigator from the Drawer Navigator
-        - enable navigating from the FavoritesScreen to the CampsiteInfoScreen by clicking on a campsite in the list of favorites
+    -   it will show a list of the campsites that have been marked as a favorite.
 
-    - Learn to use a swipe gesture to reveal option buttons
+-   Update the navigation for the mobile application so that the FavoritesScreen can be accessed as a Stack Navigator from the Drawer Navigator
 
-    - Enable tapping on a delete option button to remove a favorite
+    -   enable navigating from the FavoritesScreen to the CampsiteInfoScreen by clicking on a campsite in the list of favorites
 
-    - Learn to use React Native's built-in Alert API to show an alert dialog with configurable buttons
+-   Learn to use a swipe gesture to reveal option buttons
 
-    - Take an action upon user confirmation
+-   Enable tapping on a delete option button to remove a favorite
+
+-   Learn to use React Native's built-in Alert API to show an alert dialog with configurable buttons
+
+-   Take an action upon user confirmation
+
+COMMIT - Animations & Animatable:
+
+-   Add an animation to the Home screen, using React Native's Animated API
+
+-   Learn to use react-native-animatable
+    -   a library built on top of the React Native Animated library
+    -   gives you pre-packaged animations that can be easily applied to components
 
 REACT NATIVE NOTES:
 
