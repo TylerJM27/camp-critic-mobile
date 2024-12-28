@@ -153,6 +153,22 @@ COMMIT - Forms and Modals:
 -   Added a Modal component that can be opened from the Reservation screen
     -   Set a local state variable to show and hide the modal
 
+COMMIT - Favorites, Swipe Option Buttons, and Alerts:
+
+    - Create a new componment called FavoritesScreen
+        - it will show a list of the campsites that have been marked as a favorite.
+
+    - Update the navigation for the mobile application so that the FavoritesScreen can be accessed as a Stack Navigator from the Drawer Navigator
+        - enable navigating from the FavoritesScreen to the CampsiteInfoScreen by clicking on a campsite in the list of favorites
+
+    - Learn to use a swipe gesture to reveal option buttons
+
+    - Enable tapping on a delete option button to remove a favorite
+
+    - Learn to use React Native's built-in Alert API to show an alert dialog with configurable buttons
+
+    - Take an action upon user confirmation
+
 REACT NATIVE NOTES:
 
 WEEK 1:

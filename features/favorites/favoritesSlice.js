@@ -7,14 +7,14 @@ const favoritesSlice = createSlice({
         toggleFavorite: (favorites, action) => {
             if (favorites.includes(action.payload)) {
                 return favorites.filter(
-                    (favorite) => favorites !== action.payload
+                    (favorite) => favorite !== action.payload
                 );
             } else {
-                favorites.push(action.payload); 
+                favorites.push(action.payload);
             }
         },
     },
 });
 
 export const { toggleFavorite } = favoritesSlice.actions;
-export const favoritesReducer = favoritesSlice.reducer; 
+export const favoritesReducer = favoritesSlice.reducer;
