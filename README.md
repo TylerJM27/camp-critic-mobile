@@ -179,6 +179,12 @@ COMMIT - Animations & Animatable:
     -   a library built on top of the React Native Animated library
     -   gives you pre-packaged animations that can be easily applied to components
 
+COMMIT - Gestures:
+
+-   Learn to use the React Native built-in API called PanResponder to support gestures in your app
+
+-   Learn to use animations to give visual feedback to users in response to a gesture
+
 REACT NATIVE NOTES:
 
 WEEK 1:
