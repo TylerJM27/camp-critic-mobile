@@ -185,6 +185,12 @@ COMMIT - Gestures:
 
 -   Learn to use animations to give visual feedback to users in response to a gesture
 
+COMMIT - Persist Redux Store:
+
+-   Set up and configure redux-persist
+
+-   Learn to persist the Redux store and rehydrate it when the application is reloaded
+
 REACT NATIVE NOTES:
 
 WEEK 1:
