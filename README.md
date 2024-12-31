@@ -191,6 +191,12 @@ COMMIT - Persist Redux Store:
 
 -   Learn to persist the Redux store and rehydrate it when the application is reloaded
 
+COMMIT - Week 3 Workshop Assignment:
+
+-   Add animations to the form in the Reservation screen
+    -   When the user submits the form, you will pop up a confirmation alert
+    -   Also, added new gesture support to the RenderCampsite component
+
 REACT NATIVE NOTES:
 
 WEEK 1:
