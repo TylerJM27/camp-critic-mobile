@@ -204,6 +204,11 @@ COMMIT - Secure Store API:
     -   used each method - getItemAsync, setItemAsync, and deleteItemAsync
 -   Create a new login screen that contains a form, and uses the SecureStore API to store the login credentials
 
+COMMIT - Expo Notifications API:
+
+-   Learned and implemented methods to handle both local (client-side) and push (remote, server-generated) notifications on device
+-   Use the Expo Notifications API to generate local notifications, as well as get permissions from the device to send the local notifications
+
 REACT NATIVE NOTES:
 
 WEEK 1:
