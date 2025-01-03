@@ -197,6 +197,13 @@ COMMIT - Week 3 Workshop Assignment:
     -   When the user submits the form, you will pop up a confirmation alert
     -   Also, added new gesture support to the RenderCampsite component
 
+COMMIT - Secure Store API:
+
+-   Learned and implemented the Expo SecureStore API to store small amounts of encrypted data in key-value pairs on user's device
+    -   including how to set, get and delete the data using a unique key
+    -   used each method - getItemAsync, setItemAsync, and deleteItemAsync
+-   Create a new login screen that contains a form, and uses the SecureStore API to store the login credentials
+
 REACT NATIVE NOTES:
 
 WEEK 1:
