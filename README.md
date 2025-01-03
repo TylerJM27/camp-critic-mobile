@@ -220,6 +220,20 @@ COMMIT - Social Sharing:
 
 -   Set up React Native Share API to share information to social media accounts
 
+COMMIT - Picking/Editing an Image:
+
+-   Used the Expo ImagePicker API, which allows the user to choose an image for use in the application by either taking a new photo or by choosing an existing image
+
+-   Also used the Expo ImageManipulator API, which allows user to make edits to an existing image
+
+-   Implemented tabbed navigation with React Navigation
+
+-   Update a parent stack navigator's options based on the nested navigator's state
+
+-   Added a form to the Register tab in the Login Screen
+
+-   Learn to use the ImagePicker API from Expo to obtain an image for use in the app by taking a photo with the mobile device's camera
+
 REACT NATIVE NOTES:
 
 WEEK 1:
