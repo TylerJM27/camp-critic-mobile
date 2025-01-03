@@ -200,14 +200,25 @@ COMMIT - Week 3 Workshop Assignment:
 COMMIT - Secure Store API:
 
 -   Learned and implemented the Expo SecureStore API to store small amounts of encrypted data in key-value pairs on user's device
+
     -   including how to set, get and delete the data using a unique key
     -   used each method - getItemAsync, setItemAsync, and deleteItemAsync
+
 -   Create a new login screen that contains a form, and uses the SecureStore API to store the login credentials
 
 COMMIT - Expo Notifications API:
 
 -   Learned and implemented methods to handle both local (client-side) and push (remote, server-generated) notifications on device
+
 -   Use the Expo Notifications API to generate local notifications, as well as get permissions from the device to send the local notifications
+
+COMMIT - Social Sharing:
+
+-   Learned and implemented two social sharing APIs; MailComposer from Expo SDK and Share from React Native
+
+-   Configured the Expo MailComposer API along with a RNE Button component to open the default email client on the device to a new email with the recipient email, subject and body fields filled in.
+
+-   Set up React Native Share API to share information to social media accounts
 
 REACT NATIVE NOTES:
 
