@@ -234,6 +234,14 @@ COMMIT - Picking/Editing an Image:
 
 -   Learn to use the ImagePicker API from Expo to obtain an image for use in the app by taking a photo with the mobile device's camera
 
+COMMIT - Network Info:
+
+-   Utilized the react-native-community NetInfo library to access network state information for user's device
+
+-   Used the NetInfo library to obtain network information
+
+-   Respond to changes in the network info by displaying a message using React Native's ToastAndroid API for Android, or its Alert API for iOS
+
 REACT NATIVE NOTES:
 
 WEEK 1:
