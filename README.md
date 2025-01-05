@@ -242,6 +242,12 @@ COMMIT - Network Info:
 
 -   Respond to changes in the network info by displaying a message using React Native's ToastAndroid API for Android, or its Alert API for iOS
 
+COMMIT - Week 4 Workshop Assignment:
+
+-   Used Expo APIs to manipulate images and access saved images, as well as convert from then-based promise handling to using async/await
+
+-   Used Expo Media Library to save images taken in app to devices camera roll
+
 REACT NATIVE NOTES:
 
 WEEK 1:
