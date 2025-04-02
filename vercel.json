@@ -2,6 +2,10 @@
     "version": 2,
     "builds": [
         {
+            "src": "web-build/**/*",
+            "use": "@vercel/static"
+        },
+        {
             "src": "api/db.json",
             "use": "@vercel/static"
         }
