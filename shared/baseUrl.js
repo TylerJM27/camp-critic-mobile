@@ -1,1 +1,1 @@
-export const baseUrl = 'http://10.0.0.84:3001/';
+export const baseUrl = "https://camp-critic-mobile.vercel.app/api/db.json";
